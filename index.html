@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pieces to the Puzzle | Simplifying Business. Restoring Freedom.</title>
+<meta name="description" content="Pieces to the Puzzle is a premium operations, automation, and business-support partner helping service providers transform operational overwhelm into organized, scalable growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Official PTTP brand palette */
+  --galaxy:#03329D;      /* Blue Galaxy, primary */
+  --galaxy-deep:#02205F;
+  --sky:#40BBEC;         /* Spring Sky */
+  --mint:#4BF9B4;        /* Bright Mint */
+  --onyx:#131313;
+  --white:#FFFFFF;
+  --sky-tint:#ECF8FD;    /* Spring Sky 10% tint */
+  --galaxy-tint:#E6EBF5; /* Blue Galaxy 10% tint */
+  --ink-soft:#4A5568;
+  --line:#DCE4F0;
+  --radius:18px;
+  --shadow:0 20px 50px -22px rgba(3,50,157,.30);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--onyx);
+  background:var(--white);
+  line-height:1.7;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;line-height:1.15;color:var(--galaxy)}
+a{color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--sky);font-weight:700;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--mint)}
+.section-title{font-size:clamp(30px,4vw,44px);margin-bottom:18px;max-width:760px;letter-spacing:-.01em}
+.section-lede{color:var(--ink-soft);max-width:640px;font-size:18px}
+
+/* ---------- NAV ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:1140px;margin:0 auto;padding:0 28px;
+  height:74px;display:flex;align-items:center;justify-content:space-between;
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo-text{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--galaxy);letter-spacing:-.01em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{
+  text-decoration:none;font-size:14px;font-weight:600;color:var(--ink-soft);
+  letter-spacing:.02em;transition:color .2s;
+}
+.nav-links a:hover{color:var(--galaxy)}
+.btn{
+  display:inline-block;padding:14px 30px;border-radius:999px;
+  text-decoration:none;font-weight:700;font-size:14.5px;letter-spacing:.02em;
+  transition:transform .2s, box-shadow .2s, background .2s;
+  border:none;cursor:pointer;font-family:'DM Sans',sans-serif;
+}
+.btn-primary{background:var(--galaxy);color:#fff;box-shadow:0 10px 26px -12px rgba(3,50,157,.6)}
+.btn-primary:hover{background:var(--galaxy-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--galaxy);border:1.5px solid var(--galaxy)}
+.btn-ghost:hover{background:var(--galaxy-tint)}
+.btn-mint{background:var(--mint);color:var(--onyx)}
+.btn-mint:hover{background:#33e8a0;transform:translateY(-2px)}
+.nav-cta{padding:11px 24px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--galaxy);margin:5px 0;transition:.3s}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:180px 0 110px;
+  background:
+    radial-gradient(700px 420px at 88% 8%, rgba(64,187,236,.16), transparent 60%),
+    radial-gradient(560px 380px at 8% 90%, rgba(75,249,180,.14), transparent 60%),
+    var(--white);
+  position:relative;overflow:hidden;
+}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(38px,5.2vw,62px);margin-bottom:24px;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero p{font-size:19px;color:var(--ink-soft);max-width:520px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-note{margin-top:22px;font-size:13.5px;color:var(--ink-soft)}
+.hero-note strong{color:var(--galaxy)}
+
+/* signature: assembling puzzle */
+.puzzle-stage{position:relative;width:100%;max-width:440px;margin:0 auto;aspect-ratio:1/1}
+.puzzle-stage svg{width:100%;height:100%;overflow:visible}
+.pz{transform-origin:center;opacity:0;animation:pzIn 1s cubic-bezier(.22,1,.36,1) forwards}
+.pz1{animation-delay:.15s}
+.pz2{animation-delay:.4s}
+.pz3{animation-delay:.65s}
+.pz4{animation-delay:.9s}
+@keyframes pzIn{
+  from{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.92)}
+  to{opacity:1;transform:translate(0,0) rotate(0) scale(1)}
+}
+.pz-label{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:.14em
